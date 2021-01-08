@@ -1,0 +1,56 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+  <body>
+    <referenceBlock name="store.settings.language" remove="true"/>
+    <referenceBlock name="header.panel" remove="true"/>
+    <referenceContainer name="content">
+      <referenceBlock name="catalog.compare.sidebar" remove="true" />
+      <referenceBlock name="view.addto.compare" remove="true" />
+      <referenceBlock name="category.product.addto.compare" remove="true"/>
+    </referenceContainer>
+    <referenceContainer name="header.container">
+      <container name="header-wrapper" label="Page Header" as="header-wrapper" htmlTag="div" htmlClass="header content">
+        <container name="header.row" label="Header Row" htmlTag="div" htmlClass="row margin-no">
+          <container name="header.left" label="header Left" htmlTag="div" htmlClass="col-md-8 col-sm-12">
+            <container htmlTag="div" htmlClass="logo-search">
+              <block class="Magento\Theme\Block\Html\Header\Logo" name="logo">
+                <arguments>
+                  <argument name="logo_file" xsi:type="string">images/logo.png</argument>
+                  <argument name="logo_img_width" xsi:type="number">189</argument>
+                  <argument name="logo_img_height" xsi:type="number">64</argument>
+                </arguments>
+              </block>
+              <block class="Magento\Framework\View\Element\Template" name="header.search" template="Magento_Search::form.mini.phtml" />
+            </container>
+          </container>
+          <container name="header.right" label="Header Left" htmlTag="div" htmlClass="col-md-4 col-sm-12">
+            <container htmlTag="div" htmlClass="call-minicart">
+              <block class="Magento\Cms\Block\Block" name="block-callus">
+                <arguments>
+                  <argument name="block_id" xsi:type="string">block-callus</argument>
+                </arguments>
+              </block>
+              <block class="Magento\Framework\View\Element\Template" name="header.minicart" template="Magento_Checkout::cart/minicart.phtml" />
+            </container>
+          </container>
+        </container>
+      </container>
+    </referenceContainer>
+    <referenceContainer name="footer-container">
+      <container name="footer" as="footer" label="Page Footer" htmlTag="div" htmlClass="footer content">
+        <container name="footer.row" label="Footer Row" htmlTag="div" htmlClass="row margin-no">
+          <container name="footer.left" label="Footer Left" htmlTag="div" htmlClass="col-md-6 col-sm-12">
+            <block class="Magento\Framework\View\Element\Template" name="footer.link" template="Magento_Theme::html/footer/footer-about.phtml" />
+            <block class="Magento\Framework\View\Element\Template" name="footer.newsletter" template="Magento_Newsletter::subscribe.phtml" />
+          </container>
+          <container name="footer.right" label="Footer Right" htmlTag="div" htmlClass="col-md-6 col-sm-12">
+            <block class="Magento\Framework\View\Element\Template" name="footer.newsletter" template="Magento_Newsletter::subscribe.phtml" />
+          </container>
+        </container>
+      </container>
+    </referenceContainer>
+    <referenceContainer name="before.body.end">
+      <block class="Magento\Framework\View\Element\Template" name="copyright" template="Magento_Theme::html/footer/copyright.phtml"/>
+    </referenceContainer>
+    <move element="copyright" destination="before.body.end"/>
+  </body>
+</page>

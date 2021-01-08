@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+        <meta name="google-site-verification" content="BOefzRs9CR8cUMBSfTO2Pypm5SNQqWvNCiwnImeILk0" />
+        <!-- <remove src="lib\web\jquery\jquery-ui.js"/> -->
+        <css src="css/fontawesome.min.css"/>
+        <!-- <css src="css/owl.carousel.css"/> -->
+        <css src="css/bootstrap.min.css"/>
+        <!-- <css src="css/bootstrap-theme.min.css"/> -->
+        <css src="css/owl.carousel.min.css"/>
+        <!-- <css src="css/owl.theme.default.css"/>
+        <css src="css/owl.theme.default.min.css"/> -->
+
+        <!--<css src="css/font.css" />-->
+        <link src="https://fonts.googleapis.com/css?family=Overpass:200,300,400,800,900" src_type="url" rel="stylesheet" type="text/css" />
+
+
+        <!-- Add local resources -->
+        <css src="css/bootstrap-tiny.css"/>
+        <css src="css/stylesheet.css"/>
+        <script src="jquery.js" />
+        <script src="js/fontawesome.min.js" type="text/javascript"></script>
+        <script src="js/owlcarousel.min.js" type="text/javascript"></script>
+<!-- <script src="js/header-sticky.js" type="text/javascript"></script> -->
+        <script src="js/modal.js" type="text/javascript"></script>
+
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12/jquery-ui.js" src_type="url"/> -->
+    </head>
+</page>

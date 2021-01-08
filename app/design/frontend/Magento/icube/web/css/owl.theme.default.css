@@ -1,0 +1,133 @@
+/**
+ * Owl Carousel v2.2.1
+ * Copyright 2013-2017 David Deutsch
+ * Licensed under  ()
+ */
+/*
+ * 	Default theme - Owl Carousel CSS File
+ */
+.owl-theme .owl-nav {
+  margin-top: 10px;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent; }
+  .owl-theme .owl-nav [class*='owl-'] {
+    color: #FFF;
+    font-size: 14px;
+    margin: 5px;
+    padding: 4px 7px;
+    background: #D6D6D6;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 3px; }
+    .owl-theme .owl-nav [class*='owl-']:hover {
+      background: #869791;
+      color: #FFF;
+      text-decoration: none; }
+  .owl-theme .owl-nav .disabled {
+    opacity: 0.5;
+    cursor: default; }
+
+.owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: 10px; }
+
+.owl-theme .owl-dots {
+  text-align: center;
+  -webkit-tap-highlight-color: transparent; }
+  .owl-theme .owl-dots .owl-dot {
+    display: inline-block;
+    zoom: 1;
+    *display: inline; }
+    .owl-theme .owl-dots .owl-dot span {
+      width: 10px;
+      height: 10px;
+      margin: 5px 7px;
+      background: #D6D6D6;
+      display: block;
+      -webkit-backface-visibility: visible;
+      transition: opacity 200ms ease;
+      border-radius: 30px; }
+    .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+      background: #869791; }
+
+/*
+ *  Custom - Desktop Home
+ */
+
+ .cms-index-index .owl-theme .owl-nav {
+    position: absolute;
+    z-index: 999;
+    right: 0;
+    bottom: 0;
+ }
+ .cms-index-index .owl-theme .owl-nav .owl-prev,
+ .cms-index-index .owl-theme .owl-nav .owl-next {
+    background: #ffffff;
+    padding: 10px 15px;
+    margin: 0;
+    border-radius: 0;
+    color: #ed1c24;
+ }
+ .cms-index-index .owl-theme .owl-nav .owl-prev:hover,
+ .cms-index-index .owl-theme .owl-nav .owl-next:hover {
+    background: #ed1c24;
+    color: #ffffff;
+ }
+ .cms-index-index .owl-theme .owl-nav .owl-prev:before {
+    content: '\e617';
+    font-family: 'luma-icons';
+ }
+ .cms-index-index .owl-theme .owl-nav .owl-next:before {
+    content: '\e608';
+    font-family: 'luma-icons';
+ }
+ .cms-index-index .owl-theme .owl-dots {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+ }
+ .cms-index-index .owl-theme .owl-dots .owl-dot {
+    display: -webkit-box;
+ }
+ .cms-index-index .owl-theme .owl-dots .owl-dot span {
+    background: #ffffff;
+ }
+ .cms-index-index .owl-theme .owl-dots .owl-dot:hover span,
+ .cms-index-index .owl-theme .owl-dots .owl-dot.active span {
+    background: #ed1c24;
+ }
+ .cms-index-index .section-banner .container-banner .era-subbanner-left,
+ .cms-index-index .section-banner .container-banner .era-subbanner-right {
+    width: 50%;
+ }
+ .cms-index-index .section-banner .container-banner .era-subbanner-left .mini-wrapper .mini-slider .owl-dots {
+    bottom: 0;
+    top: unset;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+ }
+ .cms-index-index .section-banner .container-banner .era-subbanner-left .mini-wrapper .mini-slider .owl-dots .owl-dot {
+  display: inline-block;
+ }
+
+/*
+ *  Custom - Mobile Home
+ */
+ @media only screen and (max-width: 767px) {
+  .cms-index-index .section-banner .container-banner .era-subbanner-left,
+  .cms-index-index .section-banner .container-banner .era-subbanner-right {
+    width: 100%;
+  }
+  .cms-index-index .owl-theme .owl-nav {
+    display: none;
+  }
+  .cms-index-index .section-banner .container-banner .era-subbanner-left .mini-wrapper .mini-slider {
+    margin: 5px 0;
+  }
+  .cms-index-index .section-banner .container-banner .era-subbanner-left .mini-wrapper .mini-banner img,
+  .cms-index-index .section-banner .container-banner .era-subbanner-left .standing-banner img {
+    width: 100%;
+  }
+ }

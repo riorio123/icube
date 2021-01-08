@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_layout.xsd">
+  <update handle="empty"/>
+
+  <referenceContainer name="page.wrapper">
+    <container name="header.container" as="header_container" label="Page Header Container" htmlTag="header" htmlClass="page-header" before="main.content"/>
+    <container name="page.top" as="page_top" label="After Page Header" after="header.container"/>
+    <container name="page.message" as="page_message" label="Before Main Content" before="main.content"/>
+    <referenceBlock name="page.main.title" display="false"/>
+
+
+    <!-- Main Section -->
+    <referenceContainer name="main">
+      <container name="section.hero" as="section-hero" label="Section Hero" htmlTag="div" htmlClass="section-hero">
+        <container name="content.banner.row" as="content-banner-row" label="Content Banner Row" htmlTag="div" htmlClass="row margin-no">
+          <container name="content.banner.main" as="content-banner-main" label="Content Banner Main" htmlTag="div" htmlClass="col-md-12 no-padding">
+            <block class="Magento\Framework\View\Element\Template" name="homepage_banner" template="Magento_Theme::html/content/slide-banner.phtml"/>
+          </container>
+          <container name="content.banner.second" as="content-banner-second" label="Content Banner Second" htmlTag="div" htmlClass="col-md-12 no-padding">
+            <block class="Magento\Framework\View\Element\Template" name="homepage_subbanner" template="Magento_Theme::html/content/promo-banner.phtml"/>
+          </container>
+        </container>
+      </container>
+      <!-- End Section Banner -->
+    </referenceContainer>
+
+    <container name="footer-container" as="footer" before="before.body.end" label="Page Footer Container" htmlTag="footer" htmlClass="page-footer"/>
+  </referenceContainer>
+</layout>
